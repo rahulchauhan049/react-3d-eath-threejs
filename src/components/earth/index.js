@@ -15,13 +15,13 @@ export function Earth(props) {
     [EarthDayMap, EarthNormalMap, EarthSpecularMap, EarthCloudsMap]
   );
 
-    const earthRef = useRef();
-    const cloudsRef = useRef();
-    useFrame(({ clock }) => {
-        const elapsedTime = clock.getElapsedTime();
-        earthRef.current.rotation.y = elapsedTime / 30;
-        cloudsRef.current.rotation.y = elapsedTime / 28;
-    })
+  const earthRef = useRef();
+  const cloudsRef = useRef();
+  useFrame(({ clock }) => {
+    const elapsedTime = clock.getElapsedTime();
+    earthRef.current.rotation.y = elapsedTime / 30;
+    cloudsRef.current.rotation.y = elapsedTime / 28;
+  });
 
   return (
     <>
